@@ -1,0 +1,16 @@
+<router-outlet></router-outlet>
+<div style="text-align: center;">
+<h1>Steel Thread Example</h1>
+<br/>
+<form action="">
+  Enter Your Name: <input type="text" name="name" style="text-align: left;"><br><br>
+  <input type="submit" value="Save">
+</form>
+<br/>
+<div>
+<ng-container *ngFor="let person of data.names">
+<h2>{{person.name}}</h2>
+</ng-container>
+</div>
+</div>
+
