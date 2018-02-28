@@ -12,11 +12,6 @@ import { AppModule } from './app.module';
 export class AppComponent {
   title = 'Steel Thread';
 
-
- // @Component({
-  // selector: 'app-root'
-// })
-
 	   apiUrl ='http://localhost:52131/api/name';
 	   data: any = {};
 
@@ -24,6 +19,7 @@ export class AppComponent {
 	   {
 		   this.getNames();
 		   this.getData();
+       this.addNames();
 	   }
 
 	   getData()
@@ -39,4 +35,10 @@ export class AppComponent {
 		   console.log(data)
 		   })
 	   }
+
+     addNames()
+     {
+
+     }
+
 }

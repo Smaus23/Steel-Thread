@@ -8,8 +8,7 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-input[type=submit] {
+button {
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -20,7 +19,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+button:hover {
     background-color: #45a049;
 }
 
@@ -30,7 +29,7 @@ div {
     padding: 20px;
 }
 
-table, td, th {    
+table, td, th {
     border: 1px solid #ddd;
     text-align: left;
 	background-color: white;
