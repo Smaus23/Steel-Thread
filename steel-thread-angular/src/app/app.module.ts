@@ -8,6 +8,7 @@ import { Http, Response} from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import {RouterTestingModule} from '@angular/router/testing'
+import {HttpParams} from "@angular/common/http";
 import 'rxjs/add/operator/map';
 
 @NgModule({
@@ -16,7 +17,7 @@ import 'rxjs/add/operator/map';
   ],
   imports: [
     BrowserModule,
-	RouterModule,
+	RouterModule.forRoot([]),
 	HttpModule
   ],
   providers: [],
