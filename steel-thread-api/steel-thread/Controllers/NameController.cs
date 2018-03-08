@@ -13,14 +13,19 @@ namespace steel_thread.Controllers
     [RoutePrefix("api/name")]
     public class NameController : ApiController
     {
-        [Route("")]
+        [HttpGet, Route("")]
         public List<Name> GetAll()
         {
             return RetrieveNamesFromDB();
         }
 
-      
-            public List<Name> RetrieveNamesFromDB()
+        [HttpPost, Route("")]
+        public IHttpActionResult Add(string fName)
+        {
+            return Ok();
+        }
+
+        public List<Name> RetrieveNamesFromDB()
             {
             var retName = new List<Name>();
             var connection = new SqlConnection();

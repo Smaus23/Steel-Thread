@@ -2,8 +2,8 @@
 <div style="text-align: center;">
 <h1>Steel Thread Example</h1>
 <br/>
-<form action="">
-  Enter Your Name: <input type="text" name="name" style="text-align: left;"><br><br>
+<form action="post">
+  Enter Your Name: <input type="text" name="name" style="text-align: left;" ng-model="data.fName"><br><br>
 <button (click)="addName()">Save</button>
 </form>
 <br/>

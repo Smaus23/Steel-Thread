@@ -20,6 +20,7 @@ export class AppComponent {
 		   this.getNames();
 		   this.getData();
        this.addNames();
+       this.postData();
 	   }
 
 	   getData()
@@ -27,6 +28,12 @@ export class AppComponent {
 		   return this.http.get(this.apiUrl)
 		   .map((res: Response) => res.json())
 	   }
+
+     postData()
+     {
+       return this.http.post(this.apiUrl, this.data)
+		   .map((res: Response) => res.json())
+     }
 
 	   getNames()
 	   {
@@ -36,9 +43,12 @@ export class AppComponent {
 		   })
 	   }
 
-     addNames()
+    addNames()
      {
-
+        this.postData().subscribe(data => {
+        this.data = data
+          console.log("Sent: " + this.data)
+        })
      }
 
 }
