@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import {RouterTestingModule} from '@angular/router/testing'
 import {HttpParams} from "@angular/common/http";
+import { URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @NgModule({
