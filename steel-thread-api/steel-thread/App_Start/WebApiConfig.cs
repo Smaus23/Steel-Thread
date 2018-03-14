@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace steel_thread
 {
@@ -13,7 +14,9 @@ namespace steel_thread
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-
+            //config.EnableCors(
+            //    new EnableCorsAttribute(origins: "*", headers: "*", methods: "*")
+            //    );
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

@@ -3,8 +3,8 @@
 <h1>Steel Thread Example</h1>
 <br/>
 <form action="post">
-  Enter Your Name: <input type="text" name="name" style="text-align: left;" ng-model="data.fName"><br><br>
-<button (click)="addName()">Save</button>
+  Enter Your Name: <input #newname type="text" name="name" style="text-align: left;" ng-model="newname.value"><br><br>
+<button (click)="addNames(newname.value)">Save</button>
 </form>
 <br/>
 <div>

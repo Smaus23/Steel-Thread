@@ -7,6 +7,7 @@ using System.Web.Http;
 using System.Text;
 using steel_thread.Domain;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace steel_thread.Controllers
 {
@@ -19,9 +20,24 @@ namespace steel_thread.Controllers
             return RetrieveNamesFromDB();
         }
 
-        [HttpPost, Route("")]
-        public IHttpActionResult Add(string fName)
+        [HttpPost, Route("add/{name}"), AllowAnonymous]
+        public IHttpActionResult Add(string name)
         {
+            string fname = name;
+            string ConnectionString = @"Data Source=THINKPADYOGA15\SQLEXPRESS;Initial Catalog=Steel Thread;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string query = "INSERT INTO dbo.name (Name) " + "VALUES (@Name) ";
+            using (SqlConnection cn = new SqlConnection(ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(query,cn))
+            {
+                // define parameters and their values
+                cmd.Parameters.Add("@Name", SqlDbType.VarChar, 50).Value = fname;
+
+
+                // open connection, execute INSERT, close connection
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
             return Ok();
         }
 

@@ -94,3 +94,6 @@ C:\Users\Stevie\source\repos\steel-thread\steel-thread\obj\Debug\steel-thread.cs
 C:\Users\Stevie\source\repos\steel-thread\steel-thread\obj\Debug\steel-thread.csproj.CoreCompileInputs.cache
 C:\Users\Stevie\source\repos\steel-thread\steel-thread\obj\Debug\steel-thread.dll
 C:\Users\Stevie\source\repos\steel-thread\steel-thread\obj\Debug\steel-thread.pdb
+C:\Users\Stevie\source\repos\steel-thread\steel-thread\bin\System.Web.Cors.dll
+C:\Users\Stevie\source\repos\steel-thread\steel-thread\bin\System.Web.Http.Cors.dll
+C:\Users\Stevie\source\repos\steel-thread\steel-thread\bin\System.Web.Http.Cors.xml
